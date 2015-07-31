@@ -1,0 +1,93 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_rel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor" >
+
+    <ImageView
+        android:id="@+id/imageView_banner"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:scaleType="fitXY"
+        android:background="@drawable/list_row_background1" />
+
+     <ImageView
+        android:id="@+id/imageView_small_banner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/small_banner" />
+	
+     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/ll"
+        android:weightSum="4"
+        android:background="@color/btn_bgcolor"
+        android:layout_below="@+id/imageView_banner"
+        >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+			android:layout_weight="2"
+			android:padding="8dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Id"
+			android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="8dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+			android:layout_weight="1"
+			android:textColor="@color/white"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+        <ImageView
+             android:id="@+id/imgView3"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginEnd="0dp"
+             android:layout_marginRight="0dp"
+             android:gravity="end"
+           	 android:paddingTop="5dp"
+           	 android:paddingBottom="5dp"
+           	 android:visibility="invisible"
+             android:src="@drawable/ic_action_arrow" />
+
+    </LinearLayout>
+    
+     <ListView
+         android:id="@+id/listView1"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_above="@+id/imageView_small_banner"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentRight="true"
+         android:layout_below="@+id/ll"
+         android:background="@color/bgcolor" 
+         android:textColor="@color/text_color">
+     </ListView>
+
+</RelativeLayout>

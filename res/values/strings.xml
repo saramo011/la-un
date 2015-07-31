@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Spot My Laundry</string>
+
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>My Orders</item>
+        <item>My Addresses</item>
+        <item>Rate Us</item>
+        <item>Share With Friends</item>
+        <item>Report Issues</item>
+        <item>Contact Us</item>
+        <item>About Us</item>
+        <item>User Agreement</item>
+        <item>Sign Out</item>
+    </string-array>
+    
+    <string-array name="operator_items">
+        <item>050</item>
+        <item>052</item>
+        <item>055</item>
+        <item>056</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons">
+        <item>@drawable/home_new</item>
+        <item>@drawable/my_order</item>
+        <item>@drawable/manage_accounts</item>
+        <item>@drawable/rating_star</item>
+        <item>@drawable/refer_earn</item>
+        <item>@drawable/reppert_issue</item>
+        <item>@drawable/contact_us</item>
+        <item>@drawable/about_us</item>
+        <item>@drawable/user_agreement</item>
+        <item>@drawable/sign_out</item>
+    </array>
+    
+     <string name="desc_list_item_icon">Item Icon</string>
+<!-- <string name="login_text1">Sign in for free & listen to</string> -->
+
+
+<string name="about">"An easy way to discover laundries or dry clean services near you. Additionaly you can look for offers from third party merchants too."</string>
+<string name="formatted"><![CDATA[
+    <p style="bgcolor:red;">This is a html-formatted string with <b>bold</b> and <i>italic</i> text</p>
+    <p>This is another paragraph of the same string.</p>
+    ]]></string>
+
+<!-- <string name="about">"Welcome to Alsamad Group! -->
+    
+<!-- A Name which has carved out a niche for itself in the Web Industry! A pioneer in the area of IT solutions, Alsamad Group offers a wide spectrum of services including Website Design, development, Web application development. The company is 100 percent customer-driven and fully committed to offer advanced IT expertise and cutting-edge software solutions."</string> -->
+
+ <string name="network_title">""</string>
+    <string name="network_message">"Unable to connect, Please check your network connection."</string>
+
+</resources>

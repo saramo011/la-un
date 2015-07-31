@@ -1,0 +1,224 @@
+package com.spiceairtelkenya.player.network;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import android.app.Activity;
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Handler;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
+import android.telephony.TelephonyManager;
+import android.util.Log;
+import android.view.View;
+import android.view.ViewDebug.FlagToString;
+import android.widget.Button;
+import android.widget.RelativeLayout;
+
+import com.spice.mziiki.Config;
+import com.spice.mziiki.DatabaseHelper;
+import com.spice.mziiki.NoNetworkConnectionInAppActivity;
+import com.spice.mziiki.R;
+import com.spice.mziiki.util.AlertUtil;
+import com.spice.mziiki.util.ProgressDialogClass;
+
+public class Network {
+	static boolean isNetwork=false;
+	public static boolean HaveNetworkConnection(Context context) {
+		boolean HaveConnectedWifi = false;
+		boolean HaveConnectedMobile = false;
+		
+
+		ConnectivityManager cm = (ConnectivityManager) context
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo[] netInfo = cm.getAllNetworkInfo();
+		for (NetworkInfo ni : netInfo) {
+			if (ni.getTypeName().equalsIgnoreCase("WIFI"))
+				if (ni.isConnected())
+					HaveConnectedWifi = true;
+		/*	WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+			WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+			if (wifiInfo != null) {
+			    Integer linkSpeed = wifiInfo.getLinkSpeed(); //measured using WifiInfo.LINK_SPEED_UNITS
+			    Log.v("Speed..........", linkSpeed+"");
+			    Integer s=linkSpeed;
+			}*/
+			if (ni.getTypeName().equalsIgnoreCase("MOBILE"))
+				if (ni.isConnected())
+					HaveConnectedMobile = true;
+			
+		}
+		boolean flag=HaveConnectedWifi || HaveConnectedMobile;
+		//if(!flag){
+			//CheckOfflineSongs(context);
+		//}
+		return flag;
+	}
+
+	public static String CheckNetworkType(Context context) {
+		final String tag = "CheckNetworkType";
+		String networkType="wifi";
+		NetworkInfo active_network = ((ConnectivityManager) context
+				.getSystemService(Context.CONNECTIVITY_SERVICE))
+				.getActiveNetworkInfo();
+		if (active_network != null && active_network.isConnected()) {
+			if (active_network.getType() == ConnectivityManager.TYPE_WIFI) {
+				Log.v(tag, "WIFI");
+				networkType="wifi";
+				
+			} 
+			else {
+
+				TelephonyManager tm = (TelephonyManager) context
+						.getSystemService(Context.TELEPHONY_SERVICE);
+
+				if (tm.getNetworkType() == TelephonyManager.NETWORK_TYPE_EDGE) {
+					// Network type is 2G
+					
+					Log.v(tag, "2G or GSM");
+					networkType="gprs";
+				} else if (tm.getNetworkType() == TelephonyManager.NETWORK_TYPE_CDMA) {
+					// Network type is 2G
+					Log.v(tag, "2G or CDMA");
+					networkType="gprs";
+				} else if (tm.getNetworkType() == TelephonyManager.NETWORK_TYPE_UMTS) {
+					// Network type is 3G
+					Log.v(tag, "3G Network available.");
+					networkType="3G";
+				}
+				else if (tm.getNetworkType() == TelephonyManager.NETWORK_TYPE_GPRS) {
+					// Network type is 3G
+					Log.v(tag, "GPRS Network available.");
+					networkType="gprs";
+				}
+			}
+		}
+		return networkType;
+	}
+	public static void CheckOfflineSongs(final Context context){
+		DatabaseHelper db = new DatabaseHelper(context);
+		db.openDataBaseForRead();
+		ArrayList<HashMap<String,String>>	songsList = db.fetchPlayerData("Offline");
+		
+		db.close();
+		if(songsList.size()>0&&!Config.isOfflineInApp){
+			
+			final FragmentActivity activity=(FragmentActivity) context;
+
+			ProgressDialogClass.showProgressDialog(activity,"Loding...");
+			isNetwork=false;
+			 final Thread splashTread = new Thread() {
+			        @Override
+			        public void run() {
+			        	
+							
+							
+							                try {
+							                    int waited = 0;
+							                    while(waited < 3000)
+							                    {
+							                        sleep(100);
+							                        waited += 100;
+							                        if(waited%1000==0){
+							                        ((Activity) context).runOnUiThread(new Runnable() {
+							                            @Override
+							                            public void run() {
+							                            // Your dialog code.
+							                            	isNetwork= HaveNetworkConnection(activity);
+							                            	
+							                            }
+							            			});
+							                        }
+							                      
+							                        	
+
+							                    }
+							                } catch(InterruptedException e) 
+							                {
+							                    // do nothing
+							                } 
+							                finally 
+							                {
+							                	
+							                }
+							            
+								
+								
+							}
+						
+							
+						
+						
+			        	
+			        	
+			        
+			    };
+			    splashTread.start();
+			    
+			    final Handler mHandler=new Handler();
+			    final Thread displayThread = new Thread(new Runnable() {
+					public void run() {
+
+						try {
+							splashTread.join();
+						} catch (InterruptedException e) {
+							e.printStackTrace();
+						}
+						
+						if(mHandler!=null){
+						mHandler.post(new Runnable() {
+							public void run() {
+								ProgressDialogClass.dismissProgressDialog();
+								if(!isNetwork){
+									Config.playerRel.setVisibility(RelativeLayout.GONE);
+									NoNetworkConnectionInAppActivity fragment = new NoNetworkConnectionInAppActivity();
+									
+									FragmentTransaction ft = activity.getSupportFragmentManager()
+											.beginTransaction();
+
+									ft.replace(R.id.fragmentLeft, fragment);
+
+									ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
+									ft.addToBackStack(null);
+									ft.commit();
+								}
+								else{
+									
+								}
+						
+							}
+						});
+						}
+					}
+				});
+				displayThread.start();
+			
+		
+		}
+		else{
+			((Activity) context).runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                // Your dialog code.
+               
+					AlertUtil.confirmationAlert(context, context.getResources()
+							.getString(R.string.network_title),
+							context.getResources()
+							.getString(R.string.network_message),
+							new Button.OnClickListener() {
+								
+								@Override
+								public void onClick(
+										View v) {
+									// TODO Auto-generated method stub
+									AlertUtil.release();
+								}
+							});
+					
+				}
+			});
+		}
+	}
+}

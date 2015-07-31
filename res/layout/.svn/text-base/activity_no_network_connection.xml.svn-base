@@ -1,0 +1,211 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_bar" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/network_not_availabale_page" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_nav_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="No Network Connection"
+                android:textColor="#ffffff"
+                android:textSize="17sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+    
+  
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF" >
+
+        
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="@string/title_no_network_view" />
+        
+        <TextView
+            android:id="@+id/textView_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#707070"
+            android:textSize="15sp"
+            android:maxLines="5"
+            android:text="@string/msg_no_network_view" />
+
+        <RelativeLayout
+            android:id="@+id/rel_recheck"
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_below="@+id/textView_mobile"
+            android:layout_marginTop="28dp"
+			android:layout_marginLeft="15dp"
+			android:layout_marginRight="15dp"
+			android:background="@drawable/custom_red_button">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#c54134" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/network_recheck" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView3"
+                android:text="RECHECK NETWORK CONNECTION"
+                android:textColor="#ffffff"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="10dp"
+                android:textSize="12sp" />
+            
+        </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/rel_go_offline"
+             android:layout_width="match_parent"
+             android:layout_height="62dp"
+             android:layout_below="@+id/rel_recheck"
+             android:layout_marginLeft="15dp"
+             android:layout_marginRight="15dp"
+             android:layout_marginTop="10dp"
+             android:background="@drawable/custom_red_button" >
+
+             <ImageView
+                 android:id="@+id/imageView2"
+                 android:layout_width="match_parent"
+                 android:layout_height="2dp"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentTop="true"
+                 android:background="#c54134" />
+
+             <ImageView
+                 android:id="@+id/imageView3"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="10dp"
+                 android:src="@drawable/offline_nonetwork" />
+
+             <TextView
+                 android:id="@+id/textView2"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="5dp"
+                 android:layout_toRightOf="@+id/imageView3"
+                 android:text="GO OFFLINE MODE"
+                 android:textColor="#ffffff"
+                 android:textSize="12sp" />
+         </RelativeLayout>
+
+         <RelativeLayout
+             android:id="@+id/rel_exit"
+             android:layout_width="match_parent"
+             android:layout_height="62dp"
+             android:layout_alignParentLeft="true"
+             android:layout_below="@+id/rel_go_offline"
+             android:layout_marginTop="10dp"
+             android:layout_marginLeft="15dp"
+             android:layout_marginRight="15dp"
+             android:background="@drawable/custom_red_button" >
+
+             <ImageView
+                 android:id="@+id/ImageView01"
+                 android:layout_width="match_parent"
+                 android:layout_height="2dp"
+                 android:layout_alignParentLeft="true"
+                 android:layout_alignParentTop="true"
+                 android:src="#c54134" />
+
+             <ImageView
+                 android:id="@+id/ImageView02"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentLeft="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="10dp"
+                 android:src="@drawable/exit" />
+
+             <TextView
+                 android:id="@+id/TextView01"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="10dp"
+                 android:layout_marginRight="5dp"
+                 android:layout_toRightOf="@+id/ImageView02"
+                 android:text="EXIt &amp; CHECK LATER"
+                 android:textColor="#ffffff"
+                 android:textSize="12sp" />
+         </RelativeLayout>
+
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

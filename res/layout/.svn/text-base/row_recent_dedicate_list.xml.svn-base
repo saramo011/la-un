@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:background="#FFFFFF"
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/play_btn_id"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/song_dedicate" />
+
+   
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_toLeftOf="@+id/right_layout"
+        android:layout_toRightOf="@+id/play_btn_id"
+        android:layout_marginRight="5dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/textview_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textAllCaps="true"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:maxLength="20"
+                android:text="Song Name" />
+            
+            <TextView
+                android:id="@+id/textview_conatct"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:textColor="#000000"
+                android:textAllCaps="true"
+                android:layout_marginLeft="5dp"
+                android:textSize="12sp"
+                android:text="Song Name" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+
+           
+
+            <TextView
+                android:id="@+id/textview_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artist Name"
+                android:textAllCaps="true"
+                android:textColor="#000000"
+                android:singleLine="true"
+                android:maxLength="26"
+                android:textSize="12sp" />
+            
+            
+            <TextView
+                android:id="@+id/textview_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/11/2013"
+                android:textColor="#000000"
+                android:singleLine="true"
+                android:layout_marginLeft="5dp"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

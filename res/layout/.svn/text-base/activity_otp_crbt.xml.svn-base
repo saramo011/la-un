@@ -1,0 +1,213 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_bar" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/crbt_page" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_nav_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Set As Caller Tune"
+                android:textColor="#ffffff"
+                android:textSize="17sp"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/but_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/back_but" />
+    </RelativeLayout>
+    
+   
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF" >
+
+        <RelativeLayout
+            android:id="@+id/song_rel"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#404040"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/play_btn_id"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/crbt_list" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/right_layout"
+                android:layout_toRightOf="@+id/play_btn_id"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:id="@+id/songName_id"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:singleLine="true"
+                        android:text="Song Name"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp"
+                        android:textAllCaps="true"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                     <TextView
+                        android:id="@+id/duration_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5:47"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+                    <TextView
+                        android:id="@+id/artistName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Artist Name"
+                        android:layout_marginLeft="10dp"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp" />
+
+                   
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/song_rel"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:text="@string/title_otp"></TextView>
+        
+        <TextView
+            android:id="@+id/textView_mobile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="#707070"
+            android:textSize="15sp"
+            android:maxLines="5"
+            android:text="@string/msg_otp" />
+
+        <EditText
+            android:id="@+id/editText_otp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_mobile"
+            android:ems="10"
+            android:singleLine="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter OTP"
+            android:inputType="phone" >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/button_finish"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_resend"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/big_red_but"
+            android:text="FINISH"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/textView_resend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText_otp"
+            android:layout_below="@+id/editText_otp"
+            android:paddingRight="20dp"
+            android:text="Resend OTP"
+            android:textColor="#ff0000" />
+
+        <TextView
+            android:id="@+id/TextView01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/button_finish"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/msg_otp_no_extra_charge"
+            android:textColor="#707070"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

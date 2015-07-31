@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_rel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_bar" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/large_tour_logo" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/title_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center_vertical"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Welcome to Mziiki,"
+            android:textColor="#404040"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/msg_tour"
+            android:textColor="#404040"
+            android:textSize="16sp" />
+        <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/more_linear_text"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:background="#d6d6d6" />
+    </LinearLayout>
+
+    
+    
+    <LinearLayout
+        android:id="@+id/layer"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/button_rel"
+        android:layout_below="@+id/title_lay"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/button_rel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true" >
+
+        <Button
+            android:id="@+id/button_countinue_app"
+            android:layout_width="170dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_red_button"
+            android:text="COUNTINUE TO APP"
+            android:textColor="#ffffff"
+            android:textSize="12sp" />
+
+        <Button
+            android:layout_width="170dp"
+            android:layout_height="15dp"
+            android:layout_below="@+id/button_countinue_app"
+            android:layout_centerHorizontal="true"
+            android:text="COUNTINUE TO APP"
+            android:textColor="#ffffff"
+            android:textSize="12sp"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    
+
+</RelativeLayout>

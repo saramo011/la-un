@@ -1,0 +1,222 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+  	android:padding="0.5dp"
+  	  android:background="@color/bgcolor" 
+      >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+     	android:layout_gravity="center"
+     	android:gravity="center"
+     	android:layout_marginLeft="10dp"
+      android:visibility="invisible"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/on" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView1"
+         android:layout_marginTop="5dp"
+      	android:layout_marginLeft="5dp"
+      	android:padding="5dip" 
+      	android:layout_marginRight="5dp"
+        android:background="@drawable/edittextstyle"
+        android:lineSpacingMultiplier="1.2"
+        android:text="Home\nStreat abc\nBuilding 123\nAbhu Dhabhi(UAe)\nPhone Number : 8750244067"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/text_color" />
+
+
+
+   <!--  <TextView
+        android:id="@+id/textView2"
+        android:layout_width="100pt"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="4dp"
+       	android:layout_marginLeft="10dp"
+      	android:layout_marginRight="10dp"
+        android:background="@drawable/edittextstyle"
+        android:gravity="center|right"
+        android:text="Delete"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+ -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_gravity="center"
+        android:layout_toLeftOf="@+id/textView2"
+           android:layout_marginTop="4dp"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+   <!--  <TextView
+        android:id="@+id/textView4"
+         android:layout_width="100dp"
+      
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edittextstyle"
+        android:text="Edit"
+        android:textAppearance="?android:attr/textAppearanceMedium" /> -->
+        
+   <LinearLayout android:id="@+id/ll"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_marginLeft="5dp"
+       android:layout_marginRight="5dp"
+       android:weightSum="2"
+       android:layout_below="@+id/textView1">
+       
+       <ImageView
+        android:id="@+id/imageViewEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|left"
+        android:padding="5dp"
+        android:background="@drawable/buttonstyle"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:src="@drawable/ic_action_edit" />
+       
+       <ImageView
+        android:id="@+id/imageViewDiscard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|right"
+        android:background="@drawable/buttonstyle"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_weight="1"
+        android:src="@drawable/ic_action_discard" />
+       
+       </LinearLayout>
+ 
+    
+       
+    <TextView
+        android:id="@+id/AddressID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+        android:id="@+id/UserID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/AddressName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/CityID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/CountryID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/ContactNo"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/AddressLine1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/AddressLine2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/AddressLine3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/countryName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/CityName"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    <TextView
+        android:id="@+id/DefaultAddress"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:text="Large Text"
+        android:visibility="gone"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>

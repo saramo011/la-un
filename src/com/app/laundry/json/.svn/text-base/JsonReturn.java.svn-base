@@ -1,0 +1,290 @@
+package com.spice.mziiki.json;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.sax.RootElement;
+import android.util.Log;
+
+import com.spice.mziiki.Config;
+
+
+public class JsonReturn {
+
+	
+	
+	public static ArrayList<JSONObject> parseJsonData(String url,String mainTag) {
+		JSONArray contacts = null;
+		ArrayList<JSONObject> contactList = new ArrayList<JSONObject>();
+
+		// Creating JSON Parser instance
+		JSONParser jParser = new JSONParser();
+
+		// getting JSON string from URL
+		JSONObject json = jParser.getJSONFromUrl(url);
+		if(json!=null){
+		try {
+			Log.v("Json===>", json+"");
+			JSONObject contacts1 = json.getJSONObject(Config.TAG_Root);
+			if (contacts1.getString(Config.Tag_Code).toString().equals("167")||!contacts1.getString(Config.Tag_Code).toString().equals("0")) {
+				
+				//HashMap<String, String> map = new HashMap<String, String>();
+				JSONObject map=new JSONObject();
+				map.put(Config.Tag_Message, contacts1.getString(Config.Tag_Message));
+				map.put(Config.Tag_Code, contacts1.getString(Config.Tag_Code));
+				contactList.add(map);
+				
+			}
+			else{
+				contacts = contacts1.getJSONArray(mainTag);
+				
+				for (int i = 0; i < contacts.length(); i++) {
+					JSONObject c = contacts.getJSONObject(i);
+
+					contactList.add(c);
+				}
+			}
+			
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		}
+		else{
+			JSONObject map=new JSONObject();
+			try {
+				map.put(Config.Tag_Message, "Oops! There seems to be some problem while processing your request. Please try after some time.");
+				map.put(Config.Tag_Code,"505");
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			contactList.add(map);
+		}
+		return contactList;
+	}
+
+	
+	public static ArrayList<JSONObject> parseJsonDataObject(String url,String mainTag) {
+		JSONObject contacts = null;
+		ArrayList<JSONObject> contactList = new ArrayList<JSONObject>();
+
+		// Creating JSON Parser instance
+		JSONParser jParser = new JSONParser();
+
+		// getting JSON string from URL
+		JSONObject json = jParser.getJSONFromUrl(url);
+		if(json!=null){
+		try {
+			Log.v("Json===>", json+"");
+			// Getting Array of Contacts
+			JSONObject contacts1 = json.getJSONObject(Config.TAG_Root);
+			if (!contacts1.getString(Config.Tag_Code).toString().equals("0")) {
+				
+				//HashMap<String, String> map = new HashMap<String, String>();
+				JSONObject map=new JSONObject();
+				map.put(Config.Tag_Message, contacts1.getString(Config.Tag_Message));
+				contactList.add(map);
+				
+			}
+			else{
+			contacts = contacts1.getJSONObject(mainTag);
+			contactList.add(contacts);
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		}
+		else{
+			JSONObject map=new JSONObject();
+			try {
+				map.put(Config.Tag_Message, "Oops! There seems to be some problem while processing your request. Please try after some time.");
+				map.put(Config.Tag_Code,"505");
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			contactList.add(map);
+		}
+		return contactList;
+	}
+	
+	
+
+	public static ArrayList<String> parseJson(String url) {
+		JSONArray contacts = null;
+		ArrayList<String> contactList = new ArrayList<String>();
+
+		// Creating JSON Parser instance
+		JSONParser jParser = new JSONParser();
+
+		// getting JSON string from URL
+		JSONObject json = jParser.getJSONFromUrl(url);
+		
+		if(json!=null){
+		try {
+			JSONObject contacts1 = json.getJSONObject(Config.TAG_Root);
+			contacts = contacts1.getJSONArray("tracks");
+			// looping through All Contacts
+			for (int i = 0; i < contacts.length(); i++) {
+				JSONObject c = contacts.getJSONObject(i);
+				
+
+				contactList.add(c.getString("rcode"));
+			}
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		}
+		else{
+			
+		}
+		return contactList;
+	}
+
+	public static ArrayList<HashMap<String, String>> BannerparseJson(String url, String[] arr) {
+		JSONObject contacts = null;
+		ArrayList<HashMap<String, String>> contactList = new ArrayList<HashMap<String, String>>();
+
+		// Creating JSON Parser instance
+		JSONParser jParser = new JSONParser();
+
+		// getting JSON string from URL
+		JSONObject json = jParser.getJSONFromUrl(url);
+		if(json!=null){
+		try {
+			//Log.v("Json", json+"");
+			// Getting Array of Contacts
+			contacts = json.getJSONObject("root");
+			// looping through All Contacts
+			
+				HashMap<String, String> map = new HashMap<String, String>();
+				for (int j = 0; j < arr.length; j++) {
+					if(contacts.has(arr[j]))
+					map.put(arr[j], contacts.getString(arr[j]));
+				}
+				
+				contactList.add(map);
+			
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		}
+		else{
+			HashMap<String, String> map=new HashMap<String, String>();
+			
+				map.put(Config.Tag_Message, "Oops! There seems to be some problem while processing your request. Please try after some time.");
+				map.put(Config.Tag_Code,"505");
+			
+			
+			contactList.add(map);
+		}
+		return contactList;
+	}
+	
+	public static ArrayList<JSONObject> BannerparseJson1(String url) {
+		JSONObject contacts = null;
+		ArrayList<JSONObject> contactList = new ArrayList<JSONObject>();
+
+		// Creating JSON Parser instance
+		JSONParser jParser = new JSONParser();
+
+		// getting JSON string from URL
+		JSONObject json = jParser.getJSONFromUrl(url);
+		if(json!=null){
+		try {
+			//Log.v("Json", json+"");
+			// Getting Array of Contacts
+			contacts = json.getJSONObject("root");
+			// looping through All Contacts
+			
+				/*HashMap<String, String> map = new HashMap<String, String>();
+				for (int j = 0; j < arr.length; j++) {
+					map.put(arr[j], contacts.getString(arr[j]));
+				}
+				*/
+				contactList.add(contacts);
+			
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		}
+		else{
+			JSONObject map=new JSONObject();
+			try {
+				map.put(Config.Tag_Message, "Oops! There seems to be some problem while processing your request. Please try after some time.");
+				map.put(Config.Tag_Code,"505");
+			} catch (JSONException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			contactList.add(map);
+		}
+		return contactList;
+	}
+	
+	
+	public static ArrayList<String>getCountryCodeJson(String url) {
+		JSONObject contacts = null;
+		ArrayList<String> contactList = new ArrayList<String>();
+
+		JSONParser jParser = new JSONParser();
+		JSONObject json = jParser.getJSONFromUrl(url);
+		if(json!=null){
+		try {
+			
+			contacts = json.getJSONObject("root");
+			
+			if(contacts.getString("code").equals("0")){
+			if(contacts.has("countryinfo")){
+			JSONObject countryinfo=contacts.getJSONObject("countryinfo");
+			JSONObject appversion=contacts.getJSONObject("appversion");
+			
+			String id=countryinfo.getString("countryid");
+			String version=appversion.getString("android");
+			
+			
+				
+			contactList.add("0");
+				contactList.add(id);
+				contactList.add(version);
+				contactList.add(countryinfo.getString("mobnolength"));
+				contactList.add(countryinfo.getString("dialingcode"));
+			}
+			else{
+				contactList.add("5000");
+				contactList.add("Oops! There seems to be some problem while processing your request. Please try after some time");
+				
+			}
+			}
+			else{
+				String code=contacts.getString("code");
+				String message=contacts.getString("message");
+					
+				contactList.add(code);
+					contactList.add(message);
+					
+			}
+			
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		}
+		else{
+			
+			contactList.add("5000");
+				contactList.add("Oops! There seems to be some problem while processing your request. Please try after some time");
+				
+			
+			
+		}
+		return contactList;
+	}
+	
+}

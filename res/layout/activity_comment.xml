@@ -1,0 +1,106 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgcolor" >
+
+    
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_below="@+id/textView_laundryname"
+        android:layout_marginTop="20dp" >
+
+         
+          <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name :"
+            android:textColor="@color/text_color"
+            android:textSize="20sp" />
+          
+           <TextView
+            android:id="@+id/textView_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView1"
+            android:text="Ayush"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/text_color"
+            android:textSize="20sp" />
+         
+        <TextView
+            android:id="@+id/textView_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_name"
+            android:layout_marginTop="20dp"
+            android:text="Address:"
+            android:textColor="@color/text_color"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/editText_address"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView_address"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/cmnt_editbox"
+            android:ems="10"
+            android:padding="10dp"
+            android:gravity="top|left"
+    		android:inputType="textMultiLine"
+    		android:scrollHorizontally="false" 
+            android:textColor="@color/edit_text_text" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_address"
+            android:layout_marginTop="15dp"
+            android:text="Comment:"
+            android:textColor="@color/text_color"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/EditText_comment"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_below="@+id/textView_comment"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/cmnt_editbox"
+            android:ems="10"
+            android:padding="10dp"
+            android:gravity="top|left"
+    		android:inputType="textMultiLine"
+    		android:scrollHorizontally="false" 
+            android:textColor="@color/edit_text_text" />
+
+        <Button
+            android:id="@+id/but_submit"
+            android:layout_width="100dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/EditText_comment"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/submit_btn"
+            android:text="SUBMIT"
+            android:textColor="@color/button_title_color" />
+
+       
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
+  android:orientation="horizontal"
+  android:gravity="center"
+  android:background="@drawable/transparent"
+> 
+
+     <LinearLayout 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       
+       >
+      
+         
+
+      <LinearLayout  android:id="@+id/leftitem_id"
+       android:layout_width="140dp"
+       android:layout_height="180dp"
+       android:orientation="vertical"
+       android:background="#ffffff"
+       >
+       
+       <ImageView android:id="@+id/leftImage"
+           android:layout_width="match_parent"
+           android:layout_height="140dp"
+           
+           android:src="#234543"/>
+       
+       <LinearLayout android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:gravity="center_vertical">
+           
+           <ImageView android:id="@+id/leftImagesmall"
+           android:layout_width="22dp"
+           android:layout_height="22dp"
+           android:layout_marginLeft="3dp"
+           /> 
+           <RelativeLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="2dp" >
+    
+                         
+               <TextView android:id="@+id/featured_id"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#000000"
+                   android:textSize="10sp"
+                   android:text="FEATURED"/>
+               
+               <TextView android:id="@+id/type_id"
+                   android:layout_width="fill_parent"
+                   android:layout_toRightOf="@id/featured_id"
+                   android:layout_height="wrap_content"
+                   android:textColor="#000000"
+                   android:textSize="10sp"
+                   android:textStyle="bold"
+                   android:singleLine="true"
+                   android:textAllCaps="true"
+                   android:layout_marginLeft="3dp"
+                   android:text="PLAYLIST"/>
+               
+               <TextView android:id="@+id/name_id"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/featured_id"
+                   android:text="TOP 10"
+                   android:textAllCaps="true"
+                   android:singleLine="true"
+                   android:textColor="#800080"
+                   android:textSize="12sp"/>
+               
+           </RelativeLayout>
+           
+       </LinearLayout>
+       
+       
+   </LinearLayout>
+   
+   <LinearLayout  android:id="@+id/spacefortitem_id"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginLeft="15dp"
+       android:orientation="horizontal"
+       >
+       
+   </LinearLayout>
+
+      <LinearLayout  android:id="@+id/rightitem_id"
+       android:layout_width="wrap_content"
+         android:layout_height="180dp"
+       android:orientation="vertical"
+       android:background="#ffffff"
+       >
+       
+       <ImageView android:id="@+id/rightImage"
+           android:layout_width="140dp"
+           android:layout_height="140dp"
+           android:src="#234543"/>
+       
+       <LinearLayout android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:gravity="center_vertical">
+           
+           <ImageView android:id="@+id/rightImagesmall"
+           android:layout_width="22dp"
+           android:layout_height="22dp"
+           android:layout_marginLeft="3dp"
+           /> 
+           <RelativeLayout
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="2dp" >
+    
+                         
+               <TextView android:id="@+id/featured_id2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#000000"
+                   android:textSize="10sp"
+                   android:text="FEATURED"/>
+               
+               <TextView android:id="@+id/type_id2"
+                   android:layout_width="fill_parent"
+                   android:layout_toRightOf="@id/featured_id2"
+                   android:layout_height="wrap_content"
+                   android:textColor="#000000"
+                   android:textSize="10sp"
+                   android:textStyle="bold"
+                   android:singleLine="true"
+                   android:textAllCaps="true"
+                   android:layout_marginLeft="3dp"
+                   android:text="PLAYLIST"/>
+               
+               <TextView android:id="@+id/name_id2"
+                   android:layout_width="fill_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/featured_id2"
+                   android:text="TOP 10"
+                   android:textColor="#800080"
+                   android:textAllCaps="true"
+                   android:singleLine="true"
+                   android:textSize="12sp"/>
+               
+           </RelativeLayout>
+           
+       </LinearLayout>
+       
+       
+   </LinearLayout>
+   
+
+  </LinearLayout>
+   </LinearLayout>

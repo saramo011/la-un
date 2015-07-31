@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.actionbar.MainActivity" 
+     android:background="@color/bgcolor_heading">
+
+    
+    <item
+        android:id="@+id/action_search"
+        android:title="Search"
+        android:icon="@drawable/action_search"
+        app:showAsAction="always"
+        android:background="@color/bgcolor_heading"
+        android:layout_width="fill_parent"/>
+ <!--    
+    <item
+        android:id="@+id/city_list"
+        android:icon="@drawable/dots"
+        app:showAsAction="always">
+    	<menu>
+            <item android:id="@+id/city1"
+                  android:title="Dubai"
+                  app:showAsAction="never" />
+            <item android:id="@+id/city2"
+                  android:title="Soudi"
+                  app:showAsAction="never" />
+        </menu>
+    </item>
+    -->
+    
+    
+  
+</menu>

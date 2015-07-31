@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@color/bgcolor"
+     >
+
+    <TextView
+            android:id="@+id/textView_number"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:text="1"
+            android:visibility="gone"
+            android:background="#076D99"
+            android:gravity="center" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_toRightOf="@+id/textView_number"
+        android:background="@color/bgcolor" >
+
+        <TextView
+            android:id="@+id/textView_item"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Item"
+            android:textSize="12dp"
+            android:textColor="@color/text_color" />
+
+        <TextView
+            android:id="@+id/textView_service"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="DryClean+Iron "
+            android:textSize="12dp"
+            android:textColor="@color/text_color" />
+         <TextView
+            android:id="@+id/textView_service"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=" Washing+Iron"
+            android:textSize="12dp"
+            android:textColor="@color/text_color" />
+       
+        
+        <TextView
+            android:id="@+id/textView_amnt"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Ironing"
+            android:textSize="12dp"
+            android:textColor="@color/text_color" />     
+    </LinearLayout>
+   
+
+</RelativeLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/transparent"
+    android:gravity="center"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:id="@+id/leftitem_id"
+            android:layout_width="140dp"
+            android:layout_height="180dp"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/leftImage"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:src="#234543" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/leftImagesmall"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/id_artist"
+                    android:layout_marginLeft="3dp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp" >
+
+                    <TextView
+                        android:id="@+id/name_id"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="PLAYLIST"
+                        android:textAllCaps="true"
+                        android:textColor="#000000"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/featured_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name_id"
+                        android:text="Songs"
+                        android:textAllCaps="true"
+                        android:textColor="#000000"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/number_id"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name_id"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/featured_id"
+                        android:singleLine="true"
+                        android:text="[1]"
+                        android:textColor="#800080"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/spacefortitem_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/rightitem_id"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:background="#ffffff"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/rightImage"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:src="#234543" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical" >
+
+                <ImageView
+                    android:id="@+id/rightImagesmall"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/id_artist"
+                    android:layout_marginLeft="3dp" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp" >
+
+                   <TextView
+                        android:id="@+id/name_id2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:text="PLAYLIST"
+                        android:textAllCaps="true"
+                        android:textColor="#000000"
+                        android:textSize="11sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/featured_id2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name_id2"
+                        android:text="Songs"
+                        android:textAllCaps="true"
+                        android:textColor="#000000"
+                        android:textSize="11sp" />
+
+                    <TextView
+                        android:id="@+id/number_id2"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/name_id2"
+                        android:layout_marginLeft="3dp"
+                        android:layout_toRightOf="@id/featured_id2"
+                        android:singleLine="true"
+                        android:text="[1]"
+                        android:textColor="#800080"
+                        android:textSize="11sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

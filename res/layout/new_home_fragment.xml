@@ -1,0 +1,148 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_rel"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     android:background="@color/bgcolor" >
+
+        <LinearLayout
+         android:id="@+id/search_layout"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignParentLeft="true"
+         android:layout_alignParentTop="true" 
+         android:padding="10dp"
+         android:visibility="gone"
+         android:background="@color/bgcolor"
+          >
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="textPersonName" >
+            </EditText>
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="7dp"
+                android:src="@drawable/search_icon" />
+
+     	</LinearLayout>
+     
+    <ImageView
+        android:id="@+id/imageView_banner"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:layout_below="@+id/search_layout"
+        android:background="@drawable/list_row_background1" />
+    
+    <RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="5dp"
+    android:id="@+id/offerType"
+    android:layout_below="@+id/imageView_banner"
+    android:paddingBottom="1dp"
+   android:background="@color/bgcolor" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:id="@+id/header_ll">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical"
+            android:background="@color/bgcolor" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:text="Latest Offers"
+                android:padding="2dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+            	android:layout_gravity="center|right"
+				android:gravity="center"
+				
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium" 
+                
+                  />
+<!--         	<ImageView -->
+<!--                 android:id="@+id/imageView1" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:src="@drawable/patti" /> -->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+             
+            android:orientation="vertical"
+            android:background="@color/bgcolor" >
+        	
+        	<TextView
+                android:id="@+id/textView2"
+           
+                android:text="New Laundries"
+                android:padding="2dp"
+                android:textColor="@color/black"
+                android:textAppearance="?android:attr/textAppearanceMedium" 
+                android:layout_marginRight="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+            	android:layout_gravity="center|right"
+				android:gravity="center"
+				/>
+<!--         	<ImageView -->
+<!--                 android:id="@+id/imageView2" -->
+<!--                 android:layout_width="wrap_content" -->
+<!--                 android:layout_height="wrap_content" -->
+<!--                 android:src="@drawable/patti" /> -->
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
+    <ListView
+        android:id="@+id/listView_laundry"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="2dp"
+        android:dividerHeight="2dp"
+        android:divider="#00000000"
+        android:layout_above="@+id/imageView_small_banner"
+        android:layout_below="@+id/offerType" >
+
+    </ListView>
+
+     <ImageView
+        android:id="@+id/imageView_small_banner"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:scaleType="fitXY"
+        android:background="@drawable/small_banner" />
+     
+     <ProgressBar
+        android:id="@+id/progressBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

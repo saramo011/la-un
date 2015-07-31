@@ -1,0 +1,293 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout
+END
+activity_terms.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_terms.xml
+END
+main_viewer_fragment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/main_viewer_fragment.xml
+END
+activity_song_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_song_list.xml
+END
+activity_audio_settings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_audio_settings.xml
+END
+activity_about.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_about.xml
+END
+activity_no_network_connection.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_no_network_connection.xml
+END
+home.xml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/home.xml
+END
+song_option.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/song_option.xml
+END
+activity_full_player.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_full_player.xml
+END
+activity_update_password.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_update_password.xml
+END
+activity_policy.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_policy.xml
+END
+foreground_service_controller.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/foreground_service_controller.xml
+END
+register.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/register.xml
+END
+activity_web.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_web.xml
+END
+horizontal.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/horizontal.xml
+END
+splash.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/splash.xml
+END
+system_notification_popup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/system_notification_popup.xml
+END
+login.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/login.xml
+END
+row_recent_dedicate_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/row_recent_dedicate_list.xml
+END
+activity_favourit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_favourit.xml
+END
+crop_selector.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/crop_selector.xml
+END
+row_recommenrded_album.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/row_recommenrded_album.xml
+END
+activity_offline.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_offline.xml
+END
+terms_popup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/terms_popup.xml
+END
+activity_feedback.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_feedback.xml
+END
+row_recommenrded_song.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/row_recommenrded_song.xml
+END
+row_songlist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/row_songlist.xml
+END
+custom_alert_popup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/custom_alert_popup.xml
+END
+activity_paging.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_paging.xml
+END
+manage_settings.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/manage_settings.xml
+END
+row_homelist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/row_homelist.xml
+END
+play_all_popup.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/play_all_popup.xml
+END
+search_row.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/search_row.xml
+END
+activity_dedicate.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_dedicate.xml
+END
+activity_otp_crbt.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_otp_crbt.xml
+END
+activity_my_profile.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_my_profile.xml
+END
+activity_forgot_password.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_forgot_password.xml
+END
+fragmrnt_activity_main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/fragmrnt_activity_main.xml
+END
+activity_tour.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_tour.xml
+END
+activity_select_contact.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_select_contact.xml
+END
+row_notificationlist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/row_notificationlist.xml
+END
+service_dialog.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/service_dialog.xml
+END
+navigation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/navigation.xml
+END
+row_favlist.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/row_favlist.xml
+END
+activity_crbtoperator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/activity_crbtoperator.xml
+END
+home_option.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/home_option.xml
+END
+search_list.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/search_list.xml
+END
+login_information.xml
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/repos/mobile/!svn/ver/41/MZIIKI/Android/Mziiki/res/layout/login_information.xml
+END

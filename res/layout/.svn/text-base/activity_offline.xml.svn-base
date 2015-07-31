@@ -1,0 +1,178 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_rel"
+    android:background="@drawable/bg" >
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_bar" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/offline_page" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" >
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView_nav_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="My Offline Songs"
+                android:textColor="#ffffff"
+                android:textSize="17sp"
+                 />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/but_back"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/back_but" />
+        
+         <ImageButton
+            android:id="@+id/imageButton_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/search" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_search"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/nav_bar"
+        android:visibility="gone" >
+
+       
+
+        <ImageButton
+            android:id="@+id/imageButton_search_go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/search" />
+
+        <Button
+            android:id="@+id/but_close"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/close_but" />
+        
+        
+        <RelativeLayout
+            android:id="@+id/topButtonLayout11"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/imageButton_search_go"
+            android:layout_toRightOf="@+id/but_close"
+            android:background="@drawable/search_txtbox" >
+
+            <EditText
+                android:id="@+id/edit_search"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7dp"
+                android:layout_toLeftOf="@+id/imageView_cross"
+                android:background="#00000000"
+                android:hint="Search"
+                android:imeOptions="actionSearch"
+                android:inputType="textFilter|textNoSuggestions"
+                android:maxLines="1"
+                android:paddingBottom="3dp"
+                android:paddingLeft="2dp"
+                android:paddingRight="2dp"
+                android:textColor="#ffffff" />
+
+            <ImageView
+                android:id="@+id/imageView_cross"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:padding="10dp"
+                android:src="@drawable/search_cross" />
+        </RelativeLayout>
+        </RelativeLayout>
+   <RelativeLayout
+         android:id="@+id/rel_palyall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/relativeLayout1"
+        android:layout_centerHorizontal="true" >
+
+         <TextView
+             android:id="@+id/textView_total"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentLeft="true"
+             android:layout_centerVertical="true"
+             android:layout_marginLeft="10dp"
+             android:textColor="#000000"
+             android:textSize="16sp"
+             android:text="" />
+
+         <ImageView
+             android:id="@+id/imageView_play_all"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentRight="true"
+             android:layout_centerVertical="true"
+             android:layout_marginRight="10dp"
+             android:src="@drawable/play_all_but" />
+
+    </RelativeLayout>
+    
+    
+    <ListView
+          android:id="@+id/listView_offline"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/rel_palyall"
+          android:divider="#00000000"
+          android:layout_marginTop="10dp"
+          android:dividerHeight="2dp" >
+
+      </ListView>
+
+ <ImageView
+     android:id="@+id/no_offline"
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:layout_alignParentBottom="true"
+     android:layout_below="@+id/relativeLayout1"
+     android:layout_centerHorizontal="true"
+     android:src="@drawable/empty_offline"
+     android:visibility="gone" />
+
+</RelativeLayout>

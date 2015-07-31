@@ -1,0 +1,150 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000" >
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        android:background="#000000"
+        android:alpha=".7" />
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#cdcbcd"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="PLAY ALL"
+            android:textColor="#000000"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:padding="10dp"
+            android:background="#ffffff" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp" 
+            android:paddingBottom="10dp"
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                
+                android:src="@drawable/playall_popup_ic" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/imageView2"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#404040"
+                    android:textSize="14sp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/play_all_msg1" />
+
+                <Button
+                    android:id="@+id/button_add_to_queue"
+                    android:layout_width="114dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_red_button"
+                    android:text="ADD TO QUEUE"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:paddingBottom="10dp" 
+            android:background="#ffffff">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10dp"
+                android:layout_marginBottom="10dp"
+                
+                android:src="@drawable/playall_popup_ic2" />
+
+            <LinearLayout
+                android:id="@+id/replace_lay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/imageView2"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#404040"
+                    android:textSize="14sp"
+                    android:layout_marginRight="5dp"
+                    android:text="@string/play_all_msg2" />
+
+                <Button
+                    android:id="@+id/button_replace"
+                    android:layout_width="114dp"
+                    android:layout_height="28dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/custom_red_button"
+                    android:text="REPLACE QUEUE"
+                    android:textSize="12sp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/button_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="28dp"
+                android:layout_below="@+id/replace_lay"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_black_button"
+                android:text="CANCEL"
+                android:textColor="#ffffff"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>
+
